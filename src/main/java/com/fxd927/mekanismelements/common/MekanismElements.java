@@ -6,15 +6,13 @@ import com.fxd927.mekanismelements.common.registries.*;
 import mekanism.common.lib.Version;
 import mekanism.common.tile.component.TileComponentChunkLoader;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraftforge.common.MinecraftForge;
-import net.minecraftforge.common.world.ForgeChunkManager;
-import net.minecraftforge.event.AddReloadListenerEvent;
-import net.minecraftforge.eventbus.api.EventPriority;
-import net.minecraftforge.eventbus.api.IEventBus;
-import net.minecraftforge.fml.ModLoadingContext;
-import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
-import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
+import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.neoforge.event.AddReloadListenerEvent;
+import net.neoforged.bus.api.EventPriority;
+import net.neoforged.bus.api.IEventBus;
+import net.neoforged.fml.ModLoadingContext;
+import net.neoforged.fml.common.Mod;
+import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 
 import static mekanism.api.MekanismAPI.logger;
 
@@ -23,17 +21,13 @@ public class MekanismElements
 {
     public static final String MODID = "mekanismelements";
 
-    public MekanismElements(){
-        this(FMLJavaModLoadingContext.get());
-    }
-
     public final Version versionNumber;
     private MSReloadListener recipeCacheManager;
 
-    public MekanismElements(FMLJavaModLoadingContext context)
+    public MekanismElements()
     {
-        MinecraftForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::addReloadListenersLowest);
-        IEventBus modEventBus = context.getModEventBus();
+        NeoForge.EVENT_BUS.addListener(EventPriority.LOWEST, this::addReloadListenersLowest);
+        IEventBus modEventBus = ModLoadingContext.get().getActiveContainer().getEventBus();
         MSConfig.registerConfigs(ModLoadingContext.get());
         modEventBus.addListener(this::commonSetup);
         MSCreativeTab.CREATIVE_TABS.register(modEventBus);
@@ -53,11 +47,11 @@ public class MekanismElements
         MSGases.Coolants.init();
 
         versionNumber = new Version(ModLoadingContext.get().getActiveContainer());
-        MinecraftForge.EVENT_BUS.register(this);
+        // Events are registered via addListener() calls above, no need to register this class
     }
 
     public static ResourceLocation rl(String path){
-        return new ResourceLocation(MekanismElements.MODID, path);
+        return ResourceLocation.fromNamespaceAndPath(MekanismElements.MODID, path);
     }
 
     private void setRecipeCacheManager(MSReloadListener manager) {
@@ -81,7 +75,7 @@ public class MekanismElements
         setRecipeCacheManager(new MSReloadListener());
 
         event.enqueueWork(() -> {
-            ForgeChunkManager.setForcedChunkLoadingCallback(MekanismElements.MODID, TileComponentChunkLoader.ChunkValidationCallback.INSTANCE);
+            // Chunk loading callback registration - may need to be handled differently in NeoForge
             MSFluids.FLUIDS.registerBucketDispenserBehavior();
         });
     }

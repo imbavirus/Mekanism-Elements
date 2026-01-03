@@ -17,7 +17,7 @@ import java.util.function.Predicate;
 import java.util.function.Supplier;
 
 public abstract class MSDoubleInputRecipeCache <INPUT_A, INGREDIENT_A extends InputIngredient<INPUT_A>, INPUT_B, INGREDIENT_B extends InputIngredient<INPUT_B>,
-        RECIPE extends MekanismRecipe & BiPredicate<INPUT_A, INPUT_B>, CACHE_A extends IInputCache<INPUT_A, INGREDIENT_A, RECIPE>,
+        RECIPE extends MekanismRecipe<?> & BiPredicate<INPUT_A, INPUT_B>, CACHE_A extends IInputCache<INPUT_A, INGREDIENT_A, RECIPE>,
         CACHE_B extends IInputCache<INPUT_B, INGREDIENT_B, RECIPE>> extends MSAbstractInputRecipeCache<RECIPE> {
     private final Set<RECIPE> complexIngredientA = new HashSet<>();
     private final Set<RECIPE> complexIngredientB = new HashSet<>();
@@ -206,7 +206,7 @@ public abstract class MSDoubleInputRecipeCache <INPUT_A, INGREDIENT_A extends In
     /**
      * Helper expansion class for {@link DoubleInputRecipeCache} to simplify the generics when both inputs are of the same type.
      */
-    public abstract static class DoubleSameInputRecipeCache<INPUT, INGREDIENT extends InputIngredient<INPUT>, RECIPE extends MekanismRecipe & BiPredicate<INPUT, INPUT>,
+    public abstract static class DoubleSameInputRecipeCache<INPUT, INGREDIENT extends InputIngredient<INPUT>, RECIPE extends MekanismRecipe<?> & BiPredicate<INPUT, INPUT>,
             CACHE extends IInputCache<INPUT, INGREDIENT, RECIPE>> extends MSDoubleInputRecipeCache<INPUT, INGREDIENT, INPUT, INGREDIENT, RECIPE, CACHE, CACHE> {
 
         protected DoubleSameInputRecipeCache(MSRecipeType<RECIPE, ?> recipeType, Function<RECIPE, INGREDIENT> inputAExtractor,

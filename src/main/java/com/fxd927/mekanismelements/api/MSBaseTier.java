@@ -93,4 +93,12 @@ public enum MSBaseTier implements StringRepresentable, SupportsColorMap {
     public String getSerializedName() {
         return name().toLowerCase(Locale.ROOT);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public int getPackedColor() {
+        return rgbCode[0] << 16 | rgbCode[1] << 8 | rgbCode[2];
+    }
 }

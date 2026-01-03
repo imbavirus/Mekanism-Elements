@@ -1,0 +1,30 @@
+modLoader="javafml"
+loaderVersion="${loader_version}"
+license="${mod_license}"
+
+[[mods]]
+modId="mekanismelements"
+version="2.3"
+displayName="Mekanism: Elements"
+authors="FixedDolphin927"
+
+description='''${mod_description}'''
+
+[[dependencies.mekanismelements]]
+    modId="minecraft"
+    type="required"
+    versionRange="${minecraft_version_range}"
+    side="BOTH"
+
+[[dependencies.mekanismelements]]
+    modId="neoforge"
+    type="required"
+    versionRange="${neo_version}"
+    side="BOTH"
+
+[[dependencies.mekanismelements]]
+    modId="mekanism"
+    type="required"
+    versionRange="${mekanism_version_range}"
+    side="BOTH"
+

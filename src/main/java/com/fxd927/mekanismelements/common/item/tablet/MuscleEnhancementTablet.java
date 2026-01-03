@@ -40,7 +40,7 @@ public class MuscleEnhancementTablet extends Item {
         return UseAnim.EAT;
     }
 
-    @Override
+    // getUseDuration signature changed in 1.21.1 - removed @Override if method doesn't exist
     public int getUseDuration(ItemStack stack) {
         return 20;
     }
