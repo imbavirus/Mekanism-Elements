@@ -1,10 +1,9 @@
 {
   "type":"mekanism:crystallizing",
-  "chemicalType":"gas",
   "input":
   {
     "amount":100,
-    "gas":"mekanismelements:potassium_iodide"
+    "chemical":"mekanismelements:potassium_iodide"
   },
   "output":
   {

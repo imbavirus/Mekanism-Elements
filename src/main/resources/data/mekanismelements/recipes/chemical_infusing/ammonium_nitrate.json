@@ -3,16 +3,16 @@
   "leftInput":
   {
     "amount":1,
-    "gas":"mekanismelements:ammonia"
+    "chemical":"mekanismelements:ammonia"
   },
   "output":
   {
     "amount":1,
-    "gas":"mekanismelements:ammonium_nitrate"
+    "chemical":"mekanismelements:ammonium_nitrate"
   },
   "rightInput":
   {
     "amount":1,
-    "gas":"mekanismelements:nitric_acid"
+    "chemical":"mekanismelements:nitric_acid"
   }
 }

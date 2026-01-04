@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:ammonia",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:ammonia",
+  "chemical_output": {
+    "chemical": "mekanismelements:ammonia",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:ammonia",
+  "chemical_input": {
+    "chemical": "mekanismelements:ammonia",
     "amount": 1
   },
   "fluidOutput": {

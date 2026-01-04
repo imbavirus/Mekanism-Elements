@@ -1,9 +1,9 @@
 {
   "type":"mekanism:dissolution",
-  "gasInput":
+  "chemicalInput":
   {
     "amount":1,
-    "gas":"mekanismelements:aqua_regia"
+    "chemical":"mekanismelements:aqua_regia"
   },
   "itemInput":
   {
@@ -15,7 +15,6 @@
   "output":
   {
     "amount":100,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:netherite_acid"
+    "chemical":"mekanismelements:netherite_acid"
   }
 }

@@ -10,17 +10,17 @@
     "amount": 10,
     "tag": "forge:heavy_water"
   },
-  "gasInput": {
+  "chemicalInput": {
     "amount": 100,
-    "gas": "mekanismelements:strontium"
+    "chemical": "mekanismelements:strontium"
   },
   "duration": 100,
   "itemOutput": {
     "item": "mekanismelements:dust_calcium_oxide",
     "count": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:yttrium",
+  "chemicalOutput": {
+    "chemical": "mekanismelements:yttrium",
     "amount": 100
   }
 }

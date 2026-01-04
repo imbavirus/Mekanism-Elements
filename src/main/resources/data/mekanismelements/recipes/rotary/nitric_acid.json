@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:nitric_acid",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:nitric_acid",
+  "chemical_output": {
+    "chemical": "mekanismelements:nitric_acid",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:nitric_acid",
+  "chemical_input": {
+    "chemical": "mekanismelements:nitric_acid",
     "amount": 1
   },
   "fluidOutput": {

@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:aqua_regia",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:aqua_regia",
+  "chemical_output": {
+    "chemical": "mekanismelements:aqua_regia",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:aqua_regia",
+  "chemical_input": {
+    "chemical": "mekanismelements:aqua_regia",
     "amount": 1
   },
   "fluidOutput": {

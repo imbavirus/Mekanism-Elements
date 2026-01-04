@@ -3,16 +3,16 @@
   "leftInput":
   {
     "amount":3,
-    "gas":"mekanismelements:nitrogen_dioxide"
+    "chemical":"mekanismelements:nitrogen_dioxide"
   },
   "output":
   {
     "amount":2,
-    "gas":"mekanismelements:nitric_acid"
+    "chemical":"mekanismelements:nitric_acid"
   },
   "rightInput":
   {
     "amount":1,
-    "gas":"mekanism:water_vapor"
+    "chemical":"mekanism:water_vapor"
   }
 }

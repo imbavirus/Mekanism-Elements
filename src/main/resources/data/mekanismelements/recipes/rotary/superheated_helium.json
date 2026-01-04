@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:superheated_helium",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:superheated_helium",
+  "chemical_output": {
+    "chemical": "mekanismelements:superheated_helium",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:superheated_helium",
+  "chemical_input": {
+    "chemical": "mekanismelements:superheated_helium",
     "amount": 1
   },
   "fluidOutput": {

@@ -15,7 +15,6 @@
   "output":
   {
     "amount":300,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:iodine"
+    "chemical":"mekanismelements:iodine"
   }
 }

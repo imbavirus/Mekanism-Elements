@@ -2,10 +2,10 @@
   "type": "mekanism:centrifuging",
   "input": {
     "amount": 1,
-    "gas": "mekanismelements:iodine"
+    "chemical": "mekanismelements:iodine"
   },
   "output": {
-    "gas": "mekanismelements:xenon",
+    "chemical": "mekanismelements:xenon",
     "amount": 1
   }
 }

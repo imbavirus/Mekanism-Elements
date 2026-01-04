@@ -3,7 +3,7 @@
   "chemicalInput":
   {
     "amount":5,
-    "gas":"mekanismelements:ammonium_nitrate"
+    "chemical":"mekanismelements:ammonium_nitrate"
   },
   "itemInput":
   {

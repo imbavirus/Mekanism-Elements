@@ -15,7 +15,6 @@
   "output":
   {
     "amount":400,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:beryllium"
+    "chemical":"mekanismelements:beryllium"
   }
 }

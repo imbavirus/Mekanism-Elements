@@ -1,9 +1,9 @@
 {
   "type":"mekanismelements:radiation_irradiating",
-  "gasInput":
+  "chemicalInput":
   {
     "amount":4,
-    "gas":"mekanismelements:curium"
+    "chemical":"mekanismelements:curium"
   },
   "itemInput":
   {
@@ -16,7 +16,6 @@
   "output":
   {
     "amount":50,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:californium"
+    "chemical":"mekanismelements:californium"
   }
 }

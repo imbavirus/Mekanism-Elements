@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:yttrium",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:yttrium",
+  "chemical_output": {
+    "chemical": "mekanismelements:yttrium",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:yttrium",
+  "chemical_input": {
+    "chemical": "mekanismelements:yttrium",
     "amount": 1
   },
   "fluidOutput": {

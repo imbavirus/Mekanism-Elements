@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:beryllium",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:beryllium",
+  "chemical_output": {
+    "chemical": "mekanismelements:beryllium",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:beryllium",
+  "chemical_input": {
+    "chemical": "mekanismelements:beryllium",
     "amount": 1
   },
   "fluidOutput": {

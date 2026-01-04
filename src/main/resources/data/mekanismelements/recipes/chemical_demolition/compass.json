@@ -1,9 +1,9 @@
 {
   "type":"mekanismscience:chemical_demolition",
-  "gasInput":
+  "chemicalInput":
   {
     "amount":1,
-    "gas":"mekanismelements:aqua_regia"
+    "chemical":"mekanismelements:aqua_regia"
   },
   "itemInput":
   {

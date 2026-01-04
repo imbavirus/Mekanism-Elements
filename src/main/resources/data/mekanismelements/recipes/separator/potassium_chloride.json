@@ -5,14 +5,14 @@
     "amount":2,
     "fluid":"mekanismelements:potassium_chloride"
   },
-  "leftGasOutput":
+  "left_chemical_output":
   {
     "amount":2,
-    "gas":"mekanismelements:potassium_hydroxide"
+    "chemical":"mekanismelements:potassium_hydroxide"
   },
-  "rightGasOutput":
+  "right_chemical_output":
   {
     "amount":1,
-    "gas":"mekanism:chlorine"
+    "chemical":"mekanism:chlorine"
   }
 }

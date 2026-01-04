@@ -3,7 +3,7 @@
   "chemicalInput":
   {
     "amount":1,
-    "gas":"mekanismelements:tetrodotoxin"
+    "chemical":"mekanismelements:tetrodotoxin"
   },
   "itemInput":
   {

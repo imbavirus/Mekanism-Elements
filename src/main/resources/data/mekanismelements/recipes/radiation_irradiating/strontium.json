@@ -1,9 +1,9 @@
 {
   "type":"mekanismelements:radiation_irradiating",
-  "gasInput":
+  "chemicalInput":
   {
     "amount":1,
-    "gas":"mekanism:uranium_hexafluoride"
+    "chemical":"mekanism:uranium_hexafluoride"
   },
   "itemInput":
   {
@@ -15,7 +15,6 @@
   "output":
   {
     "amount":500,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:strontium"
+    "chemical":"mekanismelements:strontium"
   }
 }

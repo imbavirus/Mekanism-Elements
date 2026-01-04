@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:iodine",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:iodine",
+  "chemical_output": {
+    "chemical": "mekanismelements:iodine",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:iodine",
+  "chemical_input": {
+    "chemical": "mekanismelements:iodine",
     "amount": 1
   },
   "fluidOutput": {

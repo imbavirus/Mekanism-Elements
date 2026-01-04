@@ -6,10 +6,10 @@
     "amount":3000,
     "fluid":"mekanismelements:netherite_acid"
   },
-  "gasInput":
+  "chemicalInput":
   {
     "amount":3000,
-    "gas":"mekanismelements:californium"
+    "chemical":"mekanismelements:californium"
   },
   "itemInput":
   {

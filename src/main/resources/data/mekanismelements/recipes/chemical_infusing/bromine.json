@@ -3,16 +3,16 @@
   "leftInput":
   {
     "amount":10,
-    "gas":"mekanismelements:seawater"
+    "chemical":"mekanismelements:seawater"
   },
   "output":
   {
     "amount":1,
-    "gas":"mekanismelements:bromine"
+    "chemical":"mekanismelements:bromine"
   },
   "rightInput":
   {
     "amount":10,
-    "gas":"mekanism:chlorine"
+    "chemical":"mekanism:chlorine"
   }
 }

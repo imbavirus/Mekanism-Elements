@@ -3,16 +3,16 @@
   "leftInput":
   {
     "amount":4,
-    "gas":"mekanismelements:ammonia"
+    "chemical":"mekanismelements:ammonia"
   },
   "output":
   {
     "amount":4,
-    "gas":"mekanismelements:nitric_oxide"
+    "chemical":"mekanismelements:nitric_oxide"
   },
   "rightInput":
   {
     "amount":5,
-    "gas":"mekanism:oxygen"
+    "chemical":"mekanism:oxygen"
   }
 }

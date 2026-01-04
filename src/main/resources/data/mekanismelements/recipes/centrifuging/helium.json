@@ -2,10 +2,10 @@
   "type": "mekanism:centrifuging",
   "input": {
     "amount": 10,
-    "gas": "mekanismelements:yttrium"
+    "chemical": "mekanismelements:yttrium"
   },
   "output": {
-    "gas": "mekanismelements:helium",
+    "chemical": "mekanismelements:helium",
     "amount": 1
   }
 }

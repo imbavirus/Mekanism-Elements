@@ -3,7 +3,7 @@
   "chemicalInput":
   {
     "amount":1,
-    "gas":"mekanismelements:benzodiazepine"
+    "chemical":"mekanismelements:benzodiazepine"
   },
   "itemInput":
   {

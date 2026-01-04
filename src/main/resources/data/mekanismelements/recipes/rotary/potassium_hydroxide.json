@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:potassium_hydroxide",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:potassium_hydroxide",
+  "chemical_output": {
+    "chemical": "mekanismelements:potassium_hydroxide",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:potassium_hydroxide",
+  "chemical_input": {
+    "chemical": "mekanismelements:potassium_hydroxide",
     "amount": 1
   },
   "fluidOutput": {

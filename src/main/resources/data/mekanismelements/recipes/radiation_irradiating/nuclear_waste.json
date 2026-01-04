@@ -1,9 +1,9 @@
 {
   "type":"mekanismelements:radiation_irradiating",
-  "gasInput":
+  "chemicalInput":
   {
     "amount":4,
-    "gas":"mekanism:fissile_fuel"
+    "chemical":"mekanism:fissile_fuel"
   },
   "itemInput":
   {
@@ -16,7 +16,6 @@
   "output":
   {
     "amount":10,
-    "chemicalType":"gas",
-    "gas":"mekanism:nuclear_waste"
+    "chemical":"mekanism:nuclear_waste"
   }
 }

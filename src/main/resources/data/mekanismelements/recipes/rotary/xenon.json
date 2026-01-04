@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:xenon",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:xenon",
+  "chemical_output": {
+    "chemical": "mekanismelements:xenon",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:xenon",
+  "chemical_input": {
+    "chemical": "mekanismelements:xenon",
     "amount": 1
   },
   "fluidOutput": {

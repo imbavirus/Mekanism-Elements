@@ -1,9 +1,9 @@
 {
   "type":"mekanismelements:radiation_irradiating",
-  "gasInput":
+  "chemicalInput":
   {
     "amount":4,
-    "gas":"mekanism:plutonium"
+    "chemical":"mekanism:plutonium"
   },
   "itemInput":
   {
@@ -15,7 +15,6 @@
   "output":
   {
     "amount":500,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:americium"
+    "chemical":"mekanismelements:americium"
   }
 }

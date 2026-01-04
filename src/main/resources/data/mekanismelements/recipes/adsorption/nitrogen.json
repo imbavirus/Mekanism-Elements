@@ -15,7 +15,6 @@
   "output":
   {
     "amount":800,
-    "chemicalType":"gas",
-    "gas":"mekanismelements:nitrogen"
+    "chemical":"mekanismelements:nitrogen"
   }
 }

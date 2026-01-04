@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:strontium",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:strontium",
+  "chemical_output": {
+    "chemical": "mekanismelements:strontium",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:strontium",
+  "chemical_input": {
+    "chemical": "mekanismelements:strontium",
     "amount": 1
   },
   "fluidOutput": {

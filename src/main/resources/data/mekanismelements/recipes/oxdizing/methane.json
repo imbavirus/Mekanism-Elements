@@ -10,6 +10,6 @@
   "output":
   {
     "amount":100,
-    "gas":"mekanismelements:methane"
+    "chemical":"mekanismelements:methane"
   }
 }

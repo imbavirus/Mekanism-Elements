@@ -4,12 +4,12 @@
 "fluid": "mekanismelements:ammonium_nitrate",
 "amount": 1
 },
-"gasOutput": {
-"gas": "mekanismelements:ammonium_nitrate",
+"chemical_output": {
+"chemical": "mekanismelements:ammonium_nitrate",
 "amount": 1
 },
-"gasInput": {
-"gas": "mekanismelements:ammonium_nitrate",
+"chemical_input": {
+"chemical": "mekanismelements:ammonium_nitrate",
 "amount": 1
 },
 "fluidOutput": {

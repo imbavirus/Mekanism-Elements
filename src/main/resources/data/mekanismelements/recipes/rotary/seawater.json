@@ -4,12 +4,12 @@
     "fluid": "mekanismelements:seawater",
     "amount": 1
   },
-  "gasOutput": {
-    "gas": "mekanismelements:seawater",
+  "chemical_output": {
+    "chemical": "mekanismelements:seawater",
     "amount": 1
   },
-  "gasInput": {
-    "gas": "mekanismelements:seawater",
+  "chemical_input": {
+    "chemical": "mekanismelements:seawater",
     "amount": 1
   },
   "fluidOutput": {

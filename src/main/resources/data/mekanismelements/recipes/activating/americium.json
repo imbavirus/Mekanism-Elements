@@ -3,11 +3,11 @@
   "input":
   {
     "amount":2,
-    "gas":"mekanism:plutonium"
+    "chemical":"mekanism:plutonium"
   },
   "output":
   {
     "amount":1,
-    "gas":"mekanismelements:americium"
+    "chemical":"mekanismelements:americium"
   }
 }
