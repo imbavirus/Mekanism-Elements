@@ -67,7 +67,9 @@ public class MekanismElements
     }
 
     private void addReloadListenersLowest(AddReloadListenerEvent event) {
-        event.addListener(getRecipeCacheManager());
+        if (recipeCacheManager != null) {
+            event.addListener(recipeCacheManager);
+        }
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {

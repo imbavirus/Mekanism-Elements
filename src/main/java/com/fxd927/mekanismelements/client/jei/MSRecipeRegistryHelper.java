@@ -16,11 +16,19 @@ public class MSRecipeRegistryHelper {
 
     public static <RECIPE extends MekanismRecipe<?>> void register(IRecipeRegistration registry, IRecipeViewerRecipeType<RECIPE> recipeType,
                                                                 IMSRecipeTypeProvider<RECIPE, ?> type) {
-        register(registry, recipeType, type.getRecipes(getWorld()));
+        ClientLevel world = getWorld();
+        if (world != null) {
+            List<RECIPE> recipes = type.getRecipes(world);
+            if (!recipes.isEmpty()) {
+                register(registry, recipeType, recipes);
+            }
+        }
     }
 
     public static <RECIPE> void register(IRecipeRegistration registry, IRecipeViewerRecipeType<RECIPE> recipeType, List<RECIPE> recipes) {
-        registry.addRecipes(MekanismJEI.recipeType(recipeType), recipes);
+        if (!recipes.isEmpty()) {
+            registry.addRecipes(MekanismJEI.recipeType(recipeType), recipes);
+        }
     }
 
     private static ClientLevel getWorld() {

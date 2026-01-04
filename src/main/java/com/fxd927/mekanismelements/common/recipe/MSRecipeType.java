@@ -95,7 +95,7 @@ public class MSRecipeType<RECIPE extends MekanismRecipe<?>, INPUT_CACHE extends 
                 return Collections.emptyList();
             }
         }
-        if (cachedRecipes.isEmpty()) {
+        if (cachedRecipes.isEmpty() && world != null) {
             RecipeManager recipeManager = world.getRecipeManager();
             @SuppressWarnings({"unchecked", "rawtypes"})
             List<RecipeHolder<RECIPE>> recipeHolders = (List) recipeManager.getAllRecipesFor((RecipeType) this);

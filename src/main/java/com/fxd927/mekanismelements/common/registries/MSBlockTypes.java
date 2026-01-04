@@ -61,12 +61,13 @@ public class MSBlockTypes {
     public static final MSMachine<TileEntitySeawaterPump> SEAWATER_PUMP = MSMachine.MSMachineBuilder
             .createMSMachine(() -> MSTileEntityTypes.SEAWATER_PUMP, MSLang.DESCRIPTION_SEAWATER_PUMP)
             .withGui(() -> MSContainerTypes.SEAWATER_PUMP)
+            .withSound(MSSounds.AIR_COMPRESSOR)
             .withEnergyConfig(MSConfig.usageConfig.seawaterPump, MSConfig.storageConfig.seawaterPump)
             .withSupportedUpgrades(Upgrade.SPEED, Upgrade.ENERGY)
             .withComputerSupport("seawaterPump")
             .withSideConfig(mekanism.common.lib.transmitter.TransmissionType.ITEM, mekanism.common.lib.transmitter.TransmissionType.FLUID, mekanism.common.lib.transmitter.TransmissionType.ENERGY)
             .replace(Attributes.ACTIVE)
-    .build();
+            .build();
 
     private MSBlockTypes(){
     }

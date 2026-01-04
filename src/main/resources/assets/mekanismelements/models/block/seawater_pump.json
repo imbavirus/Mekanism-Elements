@@ -1,7 +1,7 @@
 {
 	"credit": "Made with Blockbench",
-	"parent":"block/cube_all",
-	"texture_size": [64, 64],
+	"parent": "block/cube_all",
+	"texture_size": [128, 128],
 	"textures": {
 		"0": "mekanism:block/models/ports",
 		"1": "mekanism:block/models/ports_led",
@@ -113,7 +113,7 @@
 				"up": {"uv": [8, 0, 16, 8], "texture": "#1"},
 				"down": {"uv": [0, 0, 0.75, 0.75], "texture": "#missing"}
 			},
-			"forge_data": {
+			"neoforge_data": {
 				"block_light":15,
 				"sky_light":15
 			}
@@ -131,7 +131,7 @@
 				"up": {"uv": [0, 0, 1, 0], "texture": "#missing"},
 				"down": {"uv": [0, 0, 1, 0], "texture": "#missing"}
 			},
-			"forge_data": {
+			"neoforge_data": {
 				"block_light":15,
 				"sky_light":15
 			}
@@ -164,17 +164,5 @@
 				"down": {"uv": [0, 0, 1, 0.125], "texture": "#missing"}
 			}
 		}
-	],
-	"groups": [
-		{
-			"name": "seawater_pump",
-			"origin": [4, 0, 0],
-			"color": 0,
-			"children": [0, 1, 2, 3, 4, 5, 6]
-		},
-		7,
-		8,
-		9,
-		10
 	]
 }
