@@ -389,16 +389,22 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
   # Upload artifacts
   # GitHub requires using uploads.github.com for asset uploads, not api.github.com
   # Construct upload URL manually for reliability
-  $uploadsBase = "https://uploads.github.com"
-  $uploadUrlBase = "$uploadsBase/repos/$repoPath/releases/$releaseId/assets"
+  Write-Host "Debug: repoPath = '$repoPath'"
+  Write-Host "Debug: releaseId = '$releaseId'"
   
-  # Validate that we have all required variables
   if ([string]::IsNullOrWhiteSpace($repoPath)) {
     throw "repoPath is empty or null. Cannot construct upload URL."
   }
   if ([string]::IsNullOrWhiteSpace($releaseId)) {
     throw "releaseId is empty or null. Cannot construct upload URL."
   }
+  
+  $uploadsBase = "https://uploads.github.com"
+  $uploadUrlBase = "$uploadsBase/repos/$repoPath/releases/$releaseId/assets"
+  
+  Write-Host "Debug: uploadsBase = '$uploadsBase'"
+  Write-Host "Debug: uploadUrlBase = '$uploadUrlBase'"
+  
   if ([string]::IsNullOrWhiteSpace($uploadUrlBase)) {
     throw "uploadUrlBase is empty or null. Cannot upload artifacts."
   }
