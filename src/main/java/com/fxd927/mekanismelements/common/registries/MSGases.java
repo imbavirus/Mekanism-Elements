@@ -3,10 +3,13 @@ package com.fxd927.mekanismelements.common.registries;
 import com.fxd927.mekanismelements.common.MekanismElements;
 import com.fxd927.mekanismelements.common.gas.MSChemicalConstants;
 import mekanism.api.chemical.Chemical;
+import mekanism.api.chemical.ChemicalBuilder;
 import mekanism.api.chemical.attribute.ChemicalAttributes;
 import mekanism.common.registries.MekanismChemicals;
 import mekanism.common.registration.impl.ChemicalDeferredRegister;
 import mekanism.common.registration.impl.DeferredChemical;
+
+import static com.fxd927.mekanismelements.common.MekanismElements.rl;
 
 public class MSGases {
     public static final ChemicalDeferredRegister GASES = new ChemicalDeferredRegister(MekanismElements.MODID);
@@ -68,7 +71,7 @@ public class MSGases {
         POTASSIUM_CYANIDE = GASES.register(MSChemicalConstants.POTASSIUM_CYANIDE);
         POTASSIUM_HYDROXIDE = GASES.register(MSChemicalConstants.POTASSIUM_HYDROXIDE);
         POTASSIUM_IODIDE = GASES.register(MSChemicalConstants.POTASSIUM_IODIDE);
-        SEAWATER = GASES.register(MSChemicalConstants.SEAWATER);
+        SEAWATER = GASES.register("seawater", () -> new Chemical(ChemicalBuilder.builder(rl("liquid/seawater_still")).tint(MSChemicalConstants.SEAWATER.getColor())));
         STRONTIUM = GASES.register(MSChemicalConstants.STRONTIUM);
         XENON = GASES.register(MSChemicalConstants.XENON);
         YTTRIUM = GASES.register(MSChemicalConstants.YTTRIUM);

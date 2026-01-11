@@ -1,0 +1,8 @@
+{
+  "values": {
+    "mekanismelements:ammonia": {
+      "burn_time": 100,
+      "energy": 600000
+    }
+  }
+}

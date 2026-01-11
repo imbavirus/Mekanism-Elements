@@ -7,6 +7,8 @@ import mekanism.common.registration.impl.FluidRegistryObject;
 import net.minecraft.world.item.BucketItem;
 import net.minecraft.world.level.block.LiquidBlock;
 
+import static com.fxd927.mekanismelements.common.MekanismElements.rl;
+
 public class MSFluids {
     public static final FluidDeferredRegister FLUIDS = new FluidDeferredRegister(MekanismElements.MODID);
 
@@ -30,7 +32,15 @@ public class MSFluids {
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> POTASSIUM_CYANIDE = FLUIDS.registerLiquidChemical(MSChemicalConstants.POTASSIUM_CYANIDE);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> POTASSIUM_HYDROXIDE = FLUIDS.registerLiquidChemical(MSChemicalConstants.POTASSIUM_HYDROXIDE);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> POTASSIUM_IODIDE = FLUIDS.registerLiquidChemical(MSChemicalConstants.POTASSIUM_IODIDE);
-    public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> SEAWATER = FLUIDS.registerLiquidChemical(MSChemicalConstants.SEAWATER);
+    public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> SEAWATER = FLUIDS.register("seawater", 
+          properties -> properties
+              .temperature(Math.round(MSChemicalConstants.SEAWATER.getTemperature()))
+              .density(Math.round(MSChemicalConstants.SEAWATER.getDensity()))
+              .viscosity(Math.round(MSChemicalConstants.SEAWATER.getDensity()))
+              .lightLevel(MSChemicalConstants.SEAWATER.getLightLevel()), 
+          renderProperties -> renderProperties
+              .texture(rl("liquid/seawater_still"), rl("liquid/seawater_flow"))
+              .tint(MSChemicalConstants.SEAWATER.getColor()));
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> STRONTIUM = FLUIDS.registerLiquidChemical(MSChemicalConstants.STRONTIUM);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> XENON = FLUIDS.registerLiquidChemical(MSChemicalConstants.XENON);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> YTTRIUM = FLUIDS.registerLiquidChemical(MSChemicalConstants.YTTRIUM);
