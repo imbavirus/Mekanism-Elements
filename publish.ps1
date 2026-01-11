@@ -361,6 +361,8 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
     $releaseResponse = Invoke-RestMethod -Uri "$releaseUrl/$($existingRelease.id)" -Method Patch -Headers $headers -Body $releaseBody -ErrorAction Stop
     Write-Host "Updated existing release: $tag"
     $releaseId = $existingRelease.id
+    # Store release response for potential upload_url usage
+    $currentRelease = $releaseResponse
   } catch {
     # Release doesn't exist, create it
     Write-Host "Creating new release: $tag"
@@ -385,7 +387,15 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
   }
   
   # Upload artifacts
-  $uploadUrl = "$releaseUrl/$releaseId/assets"
+  # GitHub requires using uploads.github.com for asset uploads, not api.github.com
+  # Use upload_url from release response if available, otherwise construct it manually
+  if ($releaseResponse.upload_url) {
+    # Extract base URL from upload_url template (remove {?name,label} part)
+    $uploadUrl = $releaseResponse.upload_url -replace '\{.*$', ''
+  } else {
+    $uploadsBase = "https://uploads.github.com"
+    $uploadUrl = "$uploadsBase/repos/$repoPath/releases/$releaseId/assets"
+  }
   Write-Host "Uploading $($artifacts.Count) artifact(s) to GitHub release..."
   
   foreach ($artifact in $artifacts) {
