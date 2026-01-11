@@ -294,25 +294,25 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
     
     # Try SSH with protocol: ssh://git@host/path
     if ($remote -match '^ssh://[^@]+@([^/:]+)(?::\d+)?/(.+?)(?:\.git)?/?$') {
-      $host = $Matches[1]
+      $remoteHost = $Matches[1]
       $path = $Matches[2]
-      if ($host -eq "github.com") {
+      if ($remoteHost -eq "github.com") {
         $detectedRepo = $path -replace '\.git/?$', ''
       }
     }
     # Try HTTPS: https://host/path
     elseif ($remote -match '^https?://([^/:]+)(?::\d+)?/(.+?)(?:\.git)?/?$') {
-      $host = $Matches[1]
+      $remoteHost = $Matches[1]
       $path = $Matches[2]
-      if ($host -eq "github.com" -or $host -match '^github\.') {
+      if ($remoteHost -eq "github.com" -or $remoteHost -match '^github\.') {
         $detectedRepo = $path -replace '\.git/?$', ''
       }
     }
     # Try SSH without protocol: git@host:path
     elseif ($remote -match '^[^@]+@([^/:]+)(?::\d+)?[:/](.+?)(?:\.git)?/?$') {
-      $host = $Matches[1]
+      $remoteHost = $Matches[1]
       $path = $Matches[2]
-      if ($host -eq "github.com" -or $host -match '^github\.') {
+      if ($remoteHost -eq "github.com" -or $remoteHost -match '^github\.') {
         $detectedRepo = $path -replace '\.git/?$', ''
       }
     }
