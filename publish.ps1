@@ -511,6 +511,10 @@ if ($OnlyPublish) {
     # Update gradle.properties with the specified version so the build uses it
     Write-Host "Updating gradle.properties to version: $newVersion"
     Update-GradleVersion "gradle.properties" $newVersion
+    
+    # Commit and push the version change
+    $tag = Git-CommitTagPush $newVersion
+    Write-Host "Created and pushed tag: $tag"
   } else {
     $newVersion = $currentVersion
   }
