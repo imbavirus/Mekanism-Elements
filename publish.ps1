@@ -423,7 +423,7 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
       $httpClient.Dispose()
       
       if ($response.IsSuccessStatusCode) {
-        Write-Host "  ✓ Uploaded $fileName"
+        Write-Host "  [OK] Uploaded $fileName"
       } else {
         $errorContent = $response.Content.ReadAsStringAsync().Result
         throw "Upload failed: $($response.StatusCode) - $errorContent"
@@ -435,12 +435,12 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
         $response = Invoke-WebRequest -Uri $uploadUrlWithName -Method Post -Headers $uploadHeaders -Body $fileBytes -ContentType "application/java-archive"
         
         if ($response.StatusCode -eq 201) {
-          Write-Host "  ✓ Uploaded $fileName"
+          Write-Host "  [OK] Uploaded ${fileName}"
         } else {
-          Write-Warning "  ✗ Failed to upload $fileName: HTTP $($response.StatusCode)"
+          Write-Warning "  [FAIL] Failed to upload ${fileName}: HTTP $($response.StatusCode)"
         }
       } catch {
-        Write-Warning "  ✗ Failed to upload $fileName: $_"
+        Write-Warning "  [FAIL] Failed to upload ${fileName}: $_"
       }
     }
   }
