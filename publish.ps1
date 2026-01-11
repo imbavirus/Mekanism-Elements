@@ -391,7 +391,20 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
   # Construct upload URL manually for reliability
   $uploadsBase = "https://uploads.github.com"
   $uploadUrlBase = "$uploadsBase/repos/$repoPath/releases/$releaseId/assets"
+  
+  # Validate that we have all required variables
+  if ([string]::IsNullOrWhiteSpace($repoPath)) {
+    throw "repoPath is empty or null. Cannot construct upload URL."
+  }
+  if ([string]::IsNullOrWhiteSpace($releaseId)) {
+    throw "releaseId is empty or null. Cannot construct upload URL."
+  }
+  if ([string]::IsNullOrWhiteSpace($uploadUrlBase)) {
+    throw "uploadUrlBase is empty or null. Cannot upload artifacts."
+  }
+  
   Write-Host "Uploading $($artifacts.Count) artifact(s) to GitHub release..."
+  Write-Host "Upload base URL: $uploadUrlBase"
   
   foreach ($artifact in $artifacts) {
     $fileName = $artifact.Name
@@ -405,6 +418,8 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
     # Use PowerShell's built-in URI encoding
     $encodedFileName = [Uri]::EscapeDataString($fileName)
     $uploadUrlWithName = "$uploadUrlBase?name=$encodedFileName"
+    
+    Write-Host "Full upload URL: $uploadUrlWithName"
     
     # Validate URL before attempting upload
     try {
