@@ -508,6 +508,9 @@ if ($OnlyPublish) {
   if ($Version) {
     Parse-SemVer $Version | Out-Null
     $newVersion = $Version
+    # Update gradle.properties with the specified version so the build uses it
+    Write-Host "Updating gradle.properties to version: $newVersion"
+    Update-GradleVersion "gradle.properties" $newVersion
   } else {
     $newVersion = $currentVersion
   }
