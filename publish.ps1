@@ -423,8 +423,11 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
     # The upload URL should include ?name= parameter
     # Use PowerShell's built-in URI encoding
     $encodedFileName = [Uri]::EscapeDataString($fileName)
-    $uploadUrlWithName = "$uploadUrlBase?name=$encodedFileName"
+    # Use explicit string concatenation to avoid interpolation issues
+    $uploadUrlWithName = $uploadUrlBase + "?name=" + $encodedFileName
     
+    Write-Host "Debug: uploadUrlBase in loop = '$uploadUrlBase'"
+    Write-Host "Debug: encodedFileName = '$encodedFileName'"
     Write-Host "Full upload URL: $uploadUrlWithName"
     
     # Validate URL before attempting upload
