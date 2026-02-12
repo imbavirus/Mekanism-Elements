@@ -129,8 +129,14 @@ public class TileEntityChemicalDemolitionMachine extends MSTileEntityProgressMac
     @Override
     protected void presetVariables() {
         super.presetVariables();
+        IContentsListener saveAndNotify = () -> {
+            markForSave();
+            if (recipeCacheLookupMonitor != null) {
+                recipeCacheLookupMonitor.onChange();
+            }
+        };
         injectTank = BasicChemicalTank.createModern(MAX_CHEMICAL, allowExtractingChemical() ? ConstantPredicates.alwaysTrueBi() : ConstantPredicates.notExternal(),
-              (chemical, automationType) -> containsRecipeBA(inputSlot.getStack(), chemical), this::containsRecipeB, this::markForSave);
+              (chemical, automationType) -> containsRecipeBA(inputSlot.getStack(), chemical), this::containsRecipeB, saveAndNotify);
         energyContainer = MachineEnergyContainer.input(this, this::markForSave);
     }
 
@@ -187,8 +193,8 @@ public class TileEntityChemicalDemolitionMachine extends MSTileEntityProgressMac
         builder.addSlot(chemicalInputSlot = ChemicalInventorySlot.fillOrConvert(injectTank, this::getLevel, listener, 8, 65));
         builder.addSlot(inputSlot = InputInventorySlot.at(item -> containsRecipeAB(item, injectTank.getStack()), this::containsRecipeA, recipeCacheListener, 28, 36))
                 .tracksWarnings(slot -> slot.warning(WarningTracker.WarningType.NO_MATCHING_RECIPE, getWarningCheck(CachedRecipe.OperationTracker.RecipeError.NOT_ENOUGH_INPUT)));
-        builder.addSlot(firstOutputSlot = OutputInventorySlot.at(listener, 116, 35));
-        builder.addSlot(secondOutputSlot = OutputInventorySlot.at(listener, 132, 35));
+        builder.addSlot(firstOutputSlot = OutputInventorySlot.at(recipeCacheListener, 116, 35));
+        builder.addSlot(secondOutputSlot = OutputInventorySlot.at(recipeCacheListener, 132, 35));
         builder.addSlot(energySlot = EnergyInventorySlot.fillOrConvert(energyContainer, this::getLevel, listener, 154, 62));
         chemicalInputSlot.setSlotOverlay(SlotOverlay.MINUS);
         return builder.build();

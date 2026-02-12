@@ -92,11 +92,11 @@ public class MSBlocks {
     public static final BlockRegistryObject<Block,BlockItem> PINK_HIGH_QUALITY_CONCRETE_SLABS;
 
     static {
-        ADSORPTION_SEPARATOR = BLOCKS.register("adsorption_separator",() -> new BlockTile.BlockTileModel<>(MSBlockTypes.ADSORPTION_SEPARATOR, properties -> properties.mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
-        AIR_COMPRESSOR = BLOCKS.register("air_compressor",() -> new BlockTile.BlockTileModel<>(MSBlockTypes.AIR_COMPRESSOR, properties -> properties.mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
+        ADSORPTION_SEPARATOR = BLOCKS.register("adsorption_separator",() -> new BlockTile.BlockTileModel<>(MSBlockTypes.ADSORPTION_SEPARATOR, properties -> properties.strength(3.5F, 16F).requiresCorrectToolForDrops().mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
+        AIR_COMPRESSOR = BLOCKS.register("air_compressor",() -> new BlockTile.BlockTileModel<>(MSBlockTypes.AIR_COMPRESSOR, properties -> properties.strength(3.5F, 16F).requiresCorrectToolForDrops().mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
         //CHEMICAL_DEMOLITION_MACHINE = BLOCKS.register("chemical_demolition_machine",() -> new BlockTile.BlockTileModel<>(MSBlockTypes.CHEMICAL_DEMOLITION_MACHINE, properties -> properties.mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockMachine::new);
-        RADIATION_IRRADIATOR = BLOCKS.register("radiation_irradiator", () -> new BlockTile.BlockTileModel<>(MSBlockTypes.RADIATION_IRRADIATOR, properties -> properties.mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
-        SEAWATER_PUMP = BLOCKS.register("seawater_pump", () -> new BlockTile.BlockTileModel<>(MSBlockTypes.SEAWATER_PUMP, properties -> properties.mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
+        RADIATION_IRRADIATOR = BLOCKS.register("radiation_irradiator", () -> new BlockTile.BlockTileModel<>(MSBlockTypes.RADIATION_IRRADIATOR, properties -> properties.strength(3.5F, 16F).requiresCorrectToolForDrops().mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
+        SEAWATER_PUMP = BLOCKS.register("seawater_pump", () -> new BlockTile.BlockTileModel<>(MSBlockTypes.SEAWATER_PUMP, properties -> properties.strength(3.5F, 16F).requiresCorrectToolForDrops().mapColor(BlockResourceInfo.STEEL.getMapColor())),ItemBlockTooltip::new);
 
         HIGH_QUALITY_CONCRETE = BUILDING_BLOCKS.register("high_quality_concrete", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.LIGHT_GRAY).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(5.0F, 1200.0F)));
         AQUA_HIGH_QUALITY_CONCRETE = BUILDING_BLOCKS.register("aqua_high_quality_concrete", () -> new Block(BlockBehaviour.Properties.of().mapColor(DyeColor.LIGHT_BLUE).instrument(NoteBlockInstrument.BASEDRUM).requiresCorrectToolForDrops().strength(5.0F, 1200.0F)));

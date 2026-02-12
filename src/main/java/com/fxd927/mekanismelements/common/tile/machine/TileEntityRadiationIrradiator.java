@@ -123,10 +123,15 @@ public class TileEntityRadiationIrradiator extends MSTileEntityProgressMachine<R
     @Override
     protected void presetVariables() {
         super.presetVariables();
-        IContentsListener saveOnlyListener = this::markForSave;
-        chemicalOutputTank = BasicChemicalTank.output(MAX_CHEMICAL, saveOnlyListener);
+        IContentsListener saveAndNotify = () -> {
+            markForSave();
+            if (recipeCacheLookupMonitor != null) {
+                recipeCacheLookupMonitor.onChange();
+            }
+        };
+        chemicalOutputTank = BasicChemicalTank.output(MAX_CHEMICAL, saveAndNotify);
         injectTank = BasicChemicalTank.createModern(MAX_CHEMICAL, ChemicalTankHelper.radioactiveInputTankPredicate(() -> chemicalOutputTank),
-                ConstantPredicates.alwaysTrueBi(), s -> true, ChemicalAttributeValidator.ALWAYS_ALLOW, saveOnlyListener);
+                ConstantPredicates.alwaysTrueBi(), s -> true, ChemicalAttributeValidator.ALWAYS_ALLOW, saveAndNotify);
     }
 
     @NotNull

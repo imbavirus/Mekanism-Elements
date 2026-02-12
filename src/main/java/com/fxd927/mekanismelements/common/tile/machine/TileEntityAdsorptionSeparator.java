@@ -73,7 +73,7 @@ public class TileEntityAdsorptionSeparator extends MSTileEntityProgressMachine<A
         private static final long MAX_CHEMICAL = 10_000;
         public static final int BASE_TICKS_REQUIRED = 20;
 
-        @WrappingComputerMethod(wrapper = SpecialComputerMethodWrapper.ComputerChemicalTankWrapper.class, methodNames = {"getChemicalInput", "getChemicalInputCapacity", "getChemicalInputNeeded",
+        @WrappingComputerMethod(wrapper = SpecialComputerMethodWrapper.ComputerFluidTankWrapper.class, methodNames = {"getChemicalInput", "getChemicalInputCapacity", "getChemicalInputNeeded",
                 "getChemicalInputFilledPercentage"}, docPlaceholder = "chemical input tank")
         public BasicFluidTank inputTank;
         public IChemicalTank chemicalOutputTank;
@@ -130,8 +130,13 @@ public class TileEntityAdsorptionSeparator extends MSTileEntityProgressMachine<A
         @Override
         protected void presetVariables() {
             super.presetVariables();
-            IContentsListener saveOnlyListener = this::markForSave;
-            chemicalOutputTank = BasicChemicalTank.output(MAX_CHEMICAL, saveOnlyListener);
+            IContentsListener saveAndNotify = () -> {
+                markForSave();
+                if (recipeCacheLookupMonitor != null) {
+                    recipeCacheLookupMonitor.onChange();
+                }
+            };
+            chemicalOutputTank = BasicChemicalTank.output(MAX_CHEMICAL, saveAndNotify);
         }
 
     @NotNull

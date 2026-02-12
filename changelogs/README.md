@@ -12,6 +12,7 @@ This folder contains user-relevant changelogs for all versions since the NeoForg
 - [3.0.5](3.0.5.md) - GUI Crash Fixes
 - [3.0.6](3.0.6.md) - Machine Processing & Side Config Fixes
 - [3.0.7](3.0.7.md) - Adsorbent Catalyst Fix
+- [3.0.8](3.0.8.md) - Machine Output Stalling Fixes & Block Breaking Improvements
 
 ## Note
 
