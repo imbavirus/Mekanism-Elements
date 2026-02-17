@@ -6,7 +6,7 @@ license="${mod_license}"
 modId="mekanismelements"
 version="${mod_version}"
 displayName="Mekanism: Elements"
-authors="FixedDolphin927"
+authors="Infernos"
 
 description='''${mod_description}'''
 

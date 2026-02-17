@@ -1,7 +1,7 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.fxd927.mekanismelements.mixin",
+  "package": "za.co.infernos.mekanismelements.mixin",
   "refmap": "mekanismelements.refmap.json",
   "compatibilityLevel": "JAVA_21",
   "mixins": [
@@ -9,10 +9,8 @@
     "MixinTileEntityChemicalInfuser",
     "MixinTileEntityGasGenerator"
   ],
-  "client": [
-  ],
-  "server": [
-  ],
+  "client": [],
+  "server": [],
   "injectors": {
     "defaultRequire": 1
   }

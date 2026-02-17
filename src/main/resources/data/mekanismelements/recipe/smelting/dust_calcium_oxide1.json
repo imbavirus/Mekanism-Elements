@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "minecraft:calcite"
   },
-  "result": "mekanismelements:dust_calcium_oxide"
+  "result": {
+    "id": "mekanismelements:dust_calcium_oxide"
+  }
 }

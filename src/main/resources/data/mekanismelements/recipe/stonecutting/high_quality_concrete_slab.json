@@ -4,5 +4,8 @@
   "ingredient": {
     "item": "mekanismelements:high_quality_concrete"
   },
-  "result": "mekanismelements:high_quality_concrete_slab"
+  "result": {
+    "id": "mekanismelements:high_quality_concrete_slab",
+    "count": 1
+  }
 }

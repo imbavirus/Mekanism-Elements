@@ -5,5 +5,7 @@
   "ingredient": {
     "item": "minecraft:dead_tube_coral_block"
   },
-  "result": "mekanismelements:dust_calcium_oxide"
+  "result": {
+    "id": "mekanismelements:dust_calcium_oxide"
+  }
 }
