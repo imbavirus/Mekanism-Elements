@@ -3,7 +3,6 @@
     "values": [
         "mekanismelements:adsorption_separator",
         "mekanismelements:air_compressor",
-        "mekanismelements:chemical_demolition_machine",
         "mekanismelements:radiation_irradiator",
         "mekanismelements:seawater_pump",
         "mekanismelements:high_quality_concrete",
@@ -63,8 +62,6 @@
         "mekanismelements:white_high_quality_concrete_slab",
         "mekanismelements:brown_high_quality_concrete_slab",
         "mekanismelements:pink_high_quality_concrete_slab",
-        "mekanismelements:adsorption_type_seawater_metal_extractor",
-        "mekanismelements:organic_liquid_extractor",
         "mekanismelements:seawater_pump"
     ]
 }
