@@ -127,7 +127,7 @@ public class MSRecipeType<RECIPE extends MekanismRecipe<?>, INPUT_CACHE extends 
                         }
                         return recipe;
                     })
-                    //.filter(recipe -> !recipe.isIncomplete()) // DEBUG: Disable filter
+                    .filter(recipe -> !recipe.isIncomplete())
                     .toList();
             MekanismElements.logger.info("MSRecipeType.getRecipes: Cached {} recipes", cachedRecipes.size());
         }
