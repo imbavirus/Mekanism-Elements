@@ -1,5 +1,6 @@
 {
   "values": [
     "mekanismelements:dust_calcium_oxide"
-  ]
+  ],
+  "replace": false
 }

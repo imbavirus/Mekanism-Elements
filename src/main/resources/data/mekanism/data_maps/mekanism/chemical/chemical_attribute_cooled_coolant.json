@@ -1,9 +1,10 @@
 {
-    "values": {
-        "mekanismelements:helium": {
-            "hot_variant": "mekanismelements:superheated_helium",
-            "thermal_enthalpy": 100.0,
-            "conductivity": 1.0
-        }
+  "values": {
+    "mekanismelements:helium": {
+      "hot_variant": "mekanismelements:superheated_helium",
+      "thermal_enthalpy": 100.0,
+      "conductivity": 1.0
     }
+  },
+  "replace": false
 }

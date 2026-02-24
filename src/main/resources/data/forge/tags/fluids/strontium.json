@@ -1,7 +1,7 @@
 {
-  "values":
-  [
+  "values": [
     "mekanismelements:strontium",
     "mekanismelements:flowing_strontium"
-  ]
+  ],
+  "replace": false
 }

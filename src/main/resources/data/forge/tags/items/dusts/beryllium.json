@@ -1,5 +1,6 @@
 {
   "values": [
     "mekanismelements:dust_beryllium"
-  ]
+  ],
+  "replace": false
 }

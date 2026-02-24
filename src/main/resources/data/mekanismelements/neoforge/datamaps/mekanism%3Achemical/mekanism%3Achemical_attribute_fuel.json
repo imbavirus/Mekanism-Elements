@@ -4,5 +4,6 @@
       "burn_time": 100,
       "energy": 6000
     }
-  }
+  },
+  "replace": false
 }

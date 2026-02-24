@@ -1,6 +1,5 @@
 {
-  "values":
-  [
+  "values": [
     "mekanismelements:ammonia",
     "mekanismelements:ammonium_nitrate",
     "mekanismelements:bromine",
@@ -21,5 +20,6 @@
     "mekanismelements:superheated_helium",
     "mekanismelements:strontium",
     "mekanismelements:yttrium"
-  ]
+  ],
+  "replace": false
 }

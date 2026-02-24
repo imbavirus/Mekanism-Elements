@@ -1,7 +1,7 @@
 {
-  "values":
-  [
+  "values": [
     "mekanismelements:nitric_acid",
     "mekanismelements:flowing_nitric_acid"
-  ]
+  ],
+  "replace": false
 }

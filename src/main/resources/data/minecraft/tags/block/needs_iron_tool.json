@@ -1,4 +1,5 @@
 {
+    "replace": false,
     "values": [
         "mekanismelements:adsorption_separator",
         "mekanismelements:air_compressor",
