@@ -5,10 +5,12 @@
     "chemical": "mekanismelements:helium"
   },
   "item_input": {
-    "item": "mekanismelements:syringe"
+    "item": "mekanismelements:syringe",
+    "count": 1
   },
   "output": {
+    "count": 1,
     "id": "mekanismelements:syringe_levitation"
   },
-  "per_tick_usage": false
+  "per_tick_usage": true
 }

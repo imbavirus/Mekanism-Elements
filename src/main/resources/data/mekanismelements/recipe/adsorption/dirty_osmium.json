@@ -5,7 +5,8 @@
     "fluid": "mekanismelements:seawater"
   },
   "item_input": {
-    "item": "mekanismelements:high_performance_adsorbent_osmium"
+    "item": "mekanismelements:high_performance_adsorbent_osmium",
+    "count": 1
   },
   "output": {
     "amount": 400,

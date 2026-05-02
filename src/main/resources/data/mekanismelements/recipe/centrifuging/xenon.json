@@ -1,8 +1,8 @@
 {
   "type": "mekanism:centrifuging",
   "input": {
-    "amount": 1,
-    "id": "mekanismelements:iodine"
+    "amount": 10,
+    "chemical": "mekanismelements:zirconium"
   },
   "output": {
     "id": "mekanismelements:xenon",

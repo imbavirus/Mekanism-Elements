@@ -5,6 +5,7 @@
     "chemical": "mekanism:uranium_hexafluoride"
   },
   "item_input": {
+    "count": 2,
     "item": "mekanismelements:pellet_neutron_source"
   },
   "output": {

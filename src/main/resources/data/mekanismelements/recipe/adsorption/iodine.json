@@ -5,7 +5,8 @@
     "fluid": "mekanismelements:seawater"
   },
   "item_input": {
-    "item": "minecraft:kelp"
+    "item": "minecraft:kelp",
+    "count": 1
   },
   "output": {
     "amount": 300,

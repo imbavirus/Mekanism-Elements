@@ -10,11 +10,11 @@
     "chemical": "mekanismelements:americium"
   },
   "item_output": {
-    "amount": 1,
+    "count": 1,
     "id": "mekanismelements:pellet_neutron_source"
   },
   "item_input": {
-    "amount": 1,
+    "count": 1,
     "tag": "c:dusts/steel"
   }
 }

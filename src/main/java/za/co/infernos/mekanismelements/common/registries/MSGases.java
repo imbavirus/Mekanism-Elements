@@ -15,9 +15,9 @@ public class MSGases {
     public static final DeferredChemical<Chemical> AQUA_REGIA;
     public static final DeferredChemical<Chemical> BROMINE;
     public static final DeferredChemical<Chemical> BERYLLIUM;
-    //public static final DeferredChemical<Chemical> CALIFORNIUM;
     public static final DeferredChemical<Chemical> COMPRESSED_AIR;
-    //public static final DeferredChemical<Chemical> CURIUM;
+    public static final DeferredChemical<Chemical> CALIFORNIUM;
+    public static final DeferredChemical<Chemical> CURIUM;
     public static final DeferredChemical<Chemical> DISSOLVED_SPENT_NUCLEAR_WASTE;
     public static final DeferredChemical<Chemical> HELIUM;
     public static final DeferredChemical<Chemical> HYDROGEN_CYANIDE;
@@ -27,7 +27,7 @@ public class MSGases {
     public static final DeferredChemical<Chemical> NITROGEN_DIOXIDE;
     public static final DeferredChemical<Chemical> NITRIC_ACID;
     public static final DeferredChemical<Chemical> NITROGEN;
-    //public static final DeferredChemical<Chemical> NETHERITE_ACID;
+    public static final DeferredChemical<Chemical> NETHERITE_ACID;
     public static final DeferredChemical<Chemical> NITRIC_OXIDE;
     public static final DeferredChemical<Chemical> POTASSIUM_CHLORIDE;
     public static final DeferredChemical<Chemical> POTASSIUM_CYANIDE;
@@ -47,9 +47,9 @@ public class MSGases {
         AQUA_REGIA = GASES.register(MSChemicalConstants.AQUA_REGIA);
         BROMINE = GASES.register(MSChemicalConstants.BROMINE);
         BERYLLIUM = GASES.register(MSChemicalConstants.BERYLLIUM);
-        //CALIFORNIUM = GASES.register("californium", 0xFFF08B00, new GasAttributes.Radiation(0.1));
+        CALIFORNIUM = GASES.register(MSChemicalConstants.CALIFORNIUM);
         COMPRESSED_AIR = GASES.register(MSChemicalConstants.COMPRESSED_AIR);
-        //CURIUM = GASES.register("curium",15725501,new GasAttributes.Radiation(0.07));
+        CURIUM = GASES.register(MSChemicalConstants.CURIUM);
         DISSOLVED_SPENT_NUCLEAR_WASTE = GASES.register("dissolved_spent_nuclear_waste",0x8588b1);
         // TODO: Coolant attributes need to be added via datamaps
         HELIUM = GASES.register(MSChemicalConstants.HELIUM);
@@ -57,7 +57,7 @@ public class MSGases {
         SUPERHEATED_HELIUM = GASES.register(MSChemicalConstants.SUPERHEATED_HELIUM);
         IODINE = GASES.register(MSChemicalConstants.IODINE);
         METHANE = GASES.register(MSChemicalConstants.METHANE);
-        //NETHERITE_ACID = GASES.register(MSChemicalConstants.NETHERITE_ACID);
+        NETHERITE_ACID = GASES.register(MSChemicalConstants.NETHERITE_ACID);
         NITRIC_ACID = GASES.register(MSChemicalConstants.NITRIC_ACID);
         NITROGEN = GASES.register(MSChemicalConstants.NITROGEN);
         NITROGEN_DIOXIDE = GASES.register(MSChemicalConstants.NITROGEN_DIOXIDE);

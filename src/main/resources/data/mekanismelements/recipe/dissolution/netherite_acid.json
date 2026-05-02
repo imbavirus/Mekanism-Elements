@@ -5,10 +5,12 @@
     "chemical": "mekanismelements:aqua_regia"
   },
   "item_input": {
+    "count": 1,
     "tag": "c:dusts/netherite"
   },
   "output": {
     "amount": 100,
     "id": "mekanismelements:netherite_acid"
-  }
+  },
+  "per_tick_usage": true
 }

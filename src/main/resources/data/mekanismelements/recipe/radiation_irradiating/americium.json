@@ -5,6 +5,7 @@
     "chemical": "mekanism:plutonium"
   },
   "item_input": {
+    "count": 1,
     "item": "mekanismelements:pellet_neutron_source"
   },
   "output": {

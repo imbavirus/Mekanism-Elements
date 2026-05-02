@@ -5,7 +5,7 @@
     "chemical": "mekanism:fissile_fuel"
   },
   "item_input": {
-    "amount": 3,
+    "count": 1,
     "item": "mekanismelements:pellet_neutron_source"
   },
   "output": {

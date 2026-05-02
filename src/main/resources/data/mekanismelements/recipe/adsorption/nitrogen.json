@@ -5,7 +5,8 @@
     "fluid": "mekanismelements:compressed_air"
   },
   "item_input": {
-    "tag": "c:dusts/charcoal"
+    "tag": "c:dusts/charcoal",
+    "count": 1
   },
   "output": {
     "amount": 800,

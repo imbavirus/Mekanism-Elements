@@ -1,0 +1,14 @@
+{
+    "type": "minecraft:smelting",
+    "category": "misc",
+    "cookingtime": 200,
+    "experience": 0.7,
+    "group": "refined_californium_ingot",
+    "ingredient": {
+        "item": "mekanismelements:unstable_californium_mixture"
+    },
+    "result": {
+        "count": 1,
+        "id": "mekanismelements:ingot_refined_californium"
+    }
+}

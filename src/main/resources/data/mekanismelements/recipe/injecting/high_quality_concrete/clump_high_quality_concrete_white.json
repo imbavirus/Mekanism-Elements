@@ -5,10 +5,11 @@
     "chemical": "mekanism:water_vapor"
   },
   "item_input": {
-    "item": "mekanismelements:powder_high_quality_concrete_white"
+    "item": "mekanismelements:powder_high_quality_concrete_white",
+    "count": 1
   },
   "output": {
     "id": "mekanismelements:clump_high_quality_concrete_white"
   },
-  "per_tick_usage": false
+  "per_tick_usage": true
 }

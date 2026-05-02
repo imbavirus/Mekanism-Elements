@@ -5,11 +5,12 @@
     "chemical": "mekanismelements:ammonium_nitrate"
   },
   "item_input": {
-    "item": "minecraft:firework_rocket"
+    "item": "minecraft:firework_rocket",
+    "count": 1
   },
   "output": {
     "count": 8,
     "id": "minecraft:firework_rocket"
   },
-  "per_tick_usage": false
+  "per_tick_usage": true
 }

@@ -1,13 +1,11 @@
 {
-  "type":"mekanism:crystallizing",
-  "chemicalType":"gas",
-  "input":
-  {
-    "amount":1000,
-    "gas":"mekanismelements:bromine"
+  "type": "mekanism:crystallizing",
+  "input": {
+    "amount": 1000,
+    "chemical": "mekanismelements:bromine"
   },
-  "output":
-  {
-    "item":"chemlib:bromine"
+  "output": {
+    "count": 1,
+    "id": "chemlib:bromine"
   }
 }

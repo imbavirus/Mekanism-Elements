@@ -9,6 +9,8 @@ public enum MSChemicalConstants implements IChemicalConstant {
     BERYLLIUM("beryllium", 0xFF00DB1B, 0, 1560.15F, 1850F),
     BROMINE("bromine", 0xFFBA1A08, 0, 332F, 3102.8F),
     COMPRESSED_AIR("compressed_air", 0xFFFFFFFF, 0, 78.80F, 870F),
+    CALIFORNIUM("californium", 0xFFF08B00, 0, 300F, 1F),
+    CURIUM("curium", 0xFFEFEBC5, 0, 300F, 1F),
     HELIUM("helium", 0xFFE0F0FF, 0, 4.22F, 124.9F),
     HYDROGEN_CYANIDE("hydrogen_cyanide", 0xFFC7D9F4, 0, 299F, 687.6F),
     SUPERHEATED_HELIUM("superheated_helium", 0xFFFFDDB5, 0, 2_000F, 124.9F),

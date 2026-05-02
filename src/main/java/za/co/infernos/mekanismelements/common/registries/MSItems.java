@@ -6,6 +6,8 @@ import za.co.infernos.mekanismelements.common.item.NeutronSourcePellet;
 import za.co.infernos.mekanismelements.common.item.syringe.AnestheticSyringe;
 import za.co.infernos.mekanismelements.common.item.syringe.FlameRetardantSyringe;
 import za.co.infernos.mekanismelements.common.item.syringe.LevitationSyringe;
+import za.co.infernos.mekanismelements.common.item.UnstableCaliforniumMixture;
+import za.co.infernos.mekanismelements.common.item.RefinedCaliforniumIngot;
 import mekanism.api.text.EnumColor;
 import mekanism.common.registration.impl.ItemDeferredRegister;
 import mekanism.common.registration.impl.ItemRegistryObject;
@@ -34,9 +36,9 @@ public class MSItems {
     public static final ItemRegistryObject<Item> DUST_BERYLLIUM;
     public static final ItemRegistryObject<Item> DUST_CALCIUM_OXIDE;
     public static final ItemRegistryObject<Item> INGOT_BERYLLIUM;
-    //public static final ItemRegistryObject<Item> DUST_YTTRIUM = ITEMS.register("dust_yttrium");
-    //public static final ItemRegistryObject<Item> UNSTABLE_CALIFORNIUM_MIXTURE;
-    //public static final ItemRegistryObject<Item> REFINED_CALIFORNIUM_INGOT;
+    public static final ItemRegistryObject<Item> DUST_YTTRIUM;
+    public static final ItemRegistryObject<Item> UNSTABLE_CALIFORNIUM_MIXTURE;
+    public static final ItemRegistryObject<Item> REFINED_CALIFORNIUM_INGOT;
     public static final ItemRegistryObject<Item> TABLET_IODINE;
 
     public static final ItemRegistryObject<Item> HIGH_QUALITY_CONCRETE_CLUMP;
@@ -77,9 +79,9 @@ public class MSItems {
     public static final ItemRegistryObject<Item> HIGH_QUALITY_CONCRETE_POWDER_RED;
     public static final ItemRegistryObject<Item> HIGH_QUALITY_CONCRETE_POWDER_WHITE;
     public static final ItemRegistryObject<Item> HIGH_QUALITY_CONCRETE_POWDER_YELLOW;
-    //public static final ItemRegistryObject<Item> TABLET_MUSCLE_ENHANCEMENT = ITEMS.register("tablet_muscle_enhancement", () -> new MuscleEnhancementTablet(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).saturationMod(0.0F).build())));
-    //public static final ItemRegistryObject<Item> TABLET_POISON = ITEMS.register("tablet_poison", () -> new PoisonTablet(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).saturationMod(0.0F).build())));
-    //public static final ItemRegistryObject<Item> TABLET_SLEEP_INDUCING = ITEMS.register("tablet_sleep_inducing", () -> new SleepInducingTablet(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).saturationMod(0.0F).build())));
+    public static final ItemRegistryObject<Item> TABLET_MUSCLE_ENHANCEMENT;
+    public static final ItemRegistryObject<Item> TABLET_POISON;
+    public static final ItemRegistryObject<Item> TABLET_SLEEP_INDUCING;
 
 
     static {
@@ -102,9 +104,13 @@ public class MSItems {
         INGOT_BERYLLIUM = ITEMS.register("ingot_beryllium");
         HIGH_QUALITY_CONCRETE_CLUMP = ITEMS.register("clump_high_quality_concrete");
         HIGH_QUALITY_CONCRETE_POWDER = ITEMS.register("powder_high_quality_concrete");
-        //UNSTABLE_CALIFORNIUM_MIXTURE = ITEMS.register("unstable_californium_mixture", ()-> new UnstableCaliforniumMixture(new Item.Properties(), EnumColor.ORANGE));
-        //REFINED_CALIFORNIUM_INGOT = ITEMS.register("ingot_refined_californium", ()-> new RefinedCaliforniumIngot(new Item.Properties(), EnumColor.ORANGE));
+        DUST_YTTRIUM = ITEMS.register("dust_yttrium");
+        UNSTABLE_CALIFORNIUM_MIXTURE = ITEMS.register("unstable_californium_mixture", ()-> new UnstableCaliforniumMixture(new Item.Properties(), EnumColor.ORANGE));
+        REFINED_CALIFORNIUM_INGOT = ITEMS.register("ingot_refined_californium", ()-> new RefinedCaliforniumIngot(new Item.Properties(), EnumColor.ORANGE));
         TABLET_IODINE = ITEMS.register("tablet_iodine", () -> new IodineTablet(new Item.Properties().food(new FoodProperties.Builder().nutrition(0).build())));
+        TABLET_MUSCLE_ENHANCEMENT = ITEMS.register("tablet_muscle_enhancement");
+        TABLET_POISON = ITEMS.register("tablet_poison");
+        TABLET_SLEEP_INDUCING = ITEMS.register("tablet_sleep_inducing");
 
         HIGH_QUALITY_CONCRETE_CLUMP_AQUA = BUILDING_ITEMS.register("clump_high_quality_concrete_aqua");
         HIGH_QUALITY_CONCRETE_CLUMP_BLACK = BUILDING_ITEMS.register("clump_high_quality_concrete_black");

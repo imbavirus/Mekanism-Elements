@@ -5,13 +5,15 @@
     "chemical": "mekanismelements:aqua_regia"
   },
   "item_input": {
-    "item": "minecraft:clock"
+    "item": "minecraft:clock",
+    "count": 1
   },
-  "mainOutput": {
+  "main_output": {
     "count": 4,
     "id": "minecraft:gold_ingot"
   },
-  "secondaryOutput": {
-    "id": "minecraft:redstone"
+  "secondary_output": {
+    "id": "minecraft:redstone",
+    "count": 1
   }
 }

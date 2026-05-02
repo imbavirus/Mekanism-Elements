@@ -14,7 +14,7 @@ public class MSFluids {
 
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> AMMONIA = FLUIDS.registerLiquidChemical(MSChemicalConstants.AMMONIA);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> AMMONIUM_NITRATE = FLUIDS.registerLiquidChemical(MSChemicalConstants.AMMONIUM_NITRATE);
-    //public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, FlowingFluid.Source, FlowingFluid.Flowing, LiquidBlock, BucketItem> AQUA_REGIA = FLUIDS.registerLiquidChemical(MSChemicalConstants.AQUA_REGIA);
+    public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> AQUA_REGIA = FLUIDS.registerLiquidChemical(MSChemicalConstants.AQUA_REGIA);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> BERYLLIUM = FLUIDS.registerLiquidChemical(MSChemicalConstants.BERYLLIUM);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> BROMINE = FLUIDS.registerLiquidChemical(MSChemicalConstants.BROMINE);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> COMPRESSED_AIR = FLUIDS.registerLiquidChemical(MSChemicalConstants.COMPRESSED_AIR);
@@ -23,7 +23,7 @@ public class MSFluids {
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> SUPERHEATED_HELIUM = FLUIDS.registerLiquidChemical(MSChemicalConstants.SUPERHEATED_HELIUM);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> IODINE = FLUIDS.registerLiquidChemical(MSChemicalConstants.IODINE);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> METHANE = FLUIDS.registerLiquidChemical(MSChemicalConstants.METHANE);
-    //public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, FlowingFluid.Source, FlowingFluid.Flowing, LiquidBlock, BucketItem> NETHERITE_ACID = FLUIDS.registerLiquidChemical(MSChemicalConstants.NETHERITE_ACID);
+    public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> NETHERITE_ACID = FLUIDS.registerLiquidChemical(MSChemicalConstants.NETHERITE_ACID);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> NITRIC_ACID = FLUIDS.registerLiquidChemical(MSChemicalConstants.NITRIC_ACID);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> NITROGEN = FLUIDS.registerLiquidChemical(MSChemicalConstants.NITROGEN);
     public static final FluidRegistryObject<FluidDeferredRegister.MekanismFluidType, ?, ?, LiquidBlock, BucketItem> NITROGEN_DIOXIDE = FLUIDS.registerLiquidChemical(MSChemicalConstants.NITROGEN_DIOXIDE);

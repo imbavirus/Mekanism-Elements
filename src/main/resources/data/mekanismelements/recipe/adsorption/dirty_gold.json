@@ -5,7 +5,8 @@
     "fluid": "mekanismelements:seawater"
   },
   "item_input": {
-    "item": "mekanismelements:high_performance_adsorbent_gold"
+    "item": "mekanismelements:high_performance_adsorbent_gold",
+    "count": 1
   },
   "output": {
     "amount": 400,
