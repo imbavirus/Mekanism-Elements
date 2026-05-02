@@ -244,7 +244,7 @@ function Git-CommitTagPush([string]$newVersion) {
 
   # Fetch latest from remote to see if we're behind
   Write-Host "Fetching latest from remote..."
-  git fetch origin
+  git fetch origin 2>&1 | Out-Null
   if ($LASTEXITCODE -ne 0) {
     Write-Warning "Failed to fetch from origin, but continuing..."
   }
@@ -262,7 +262,7 @@ function Git-CommitTagPush([string]$newVersion) {
   
   if ($remoteExists) {
     # Check if we're behind the remote
-    git fetch origin $currentBranch 2>$null | Out-Null
+    git fetch origin $currentBranch 2>&1 | Out-Null
     $localCommit = git rev-parse HEAD
     $remoteCommit = git rev-parse $remoteBranch 2>$null
     if ($remoteCommit -and $localCommit) {
@@ -621,7 +621,8 @@ function Upload-ToCurseForge([string]$version, [array]$artifacts) {
   Write-Host "  ReleaseType: $releaseType"
 
   Add-Type -AssemblyName System.Net.Http
-  $client = New-Object System.Net.Http.HttpClient`n  $client.Timeout = [System.TimeSpan]::FromSeconds(120)
+  $client = New-Object System.Net.Http.HttpClient
+  $client.Timeout = [System.TimeSpan]::FromSeconds(120)
   $client.DefaultRequestHeaders.Add("X-Api-Token", $cf.Token)
 
   $multipart = New-Object System.Net.Http.MultipartFormDataContent
@@ -637,7 +638,8 @@ function Upload-ToCurseForge([string]$version, [array]$artifacts) {
     $resp = $client.PostAsync($uploadUri, $multipart).Result
     $respBody = $resp.Content.ReadAsStringAsync().Result
     if (-not $resp.IsSuccessStatusCode) {
-      throw "CurseForge upload failed: $([int]$resp.StatusCode) $($resp.ReasonPhrase)`n$respBody"
+      throw "CurseForge upload failed: $([int]$resp.StatusCode) $($resp.ReasonPhrase)
+$respBody"
     }
 
     Write-Host "  [OK] Uploaded to CurseForge."
@@ -828,7 +830,8 @@ function Upload-ToModrinth([string]$version, [array]$artifacts) {
   Write-Host "  Release Type: $releaseType"
 
   Add-Type -AssemblyName System.Net.Http
-  $client = New-Object System.Net.Http.HttpClient`n  $client.Timeout = [System.TimeSpan]::FromSeconds(120)
+  $client = New-Object System.Net.Http.HttpClient
+  $client.Timeout = [System.TimeSpan]::FromSeconds(120)
   $client.Timeout = [System.TimeSpan]::FromSeconds(60)
   # Modrinth uses "Authorization: <token>" header format
   $client.DefaultRequestHeaders.Add("Authorization", $mr.Token)
@@ -848,7 +851,8 @@ function Upload-ToModrinth([string]$version, [array]$artifacts) {
     $resp = $client.PostAsync($uploadUri, $multipart).Result
     $respBody = $resp.Content.ReadAsStringAsync().Result
     if (-not $resp.IsSuccessStatusCode) {
-      throw "Modrinth upload failed: $([int]$resp.StatusCode) $($resp.ReasonPhrase)`n$respBody"
+      throw "Modrinth upload failed: $([int]$resp.StatusCode) $($resp.ReasonPhrase)
+$respBody"
     }
 
     Write-Host "  [OK] Uploaded to Modrinth."
@@ -1052,7 +1056,8 @@ function Upload-ToGitHubRelease([string]$version, [array]$artifacts) {
       # Use HttpClient for reliable file uploads
       Add-Type -AssemblyName System.Net.Http
       
-      $httpClient = New-Object System.Net.Http.HttpClient`n      $httpClient.Timeout = [System.TimeSpan]::FromSeconds(120)
+      $httpClient = New-Object System.Net.Http.HttpClient
+      $httpClient.Timeout = [System.TimeSpan]::FromSeconds(120)
       $httpClient.DefaultRequestHeaders.Add("Authorization", "token $script:GitHubToken")
       $httpClient.DefaultRequestHeaders.Add("Accept", "application/vnd.github.v3+json")
       
