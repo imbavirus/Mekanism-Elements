@@ -145,7 +145,7 @@ public class TileEntityAdsorptionSeparator extends MSTileEntityProgressMachine<A
 
     @NotNull
     @Override
-    public IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener) {
+    protected IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
         ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
         builder.addTank(chemicalOutputTank);
         return builder.build();

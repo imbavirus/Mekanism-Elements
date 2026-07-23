@@ -136,7 +136,7 @@ public class TileEntityChemicalDemolitionMachine extends MSTileEntityProgressMac
 
     @NotNull
     @Override
-    public IChemicalTankHolder getInitialGasTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
+    protected IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
         ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
         builder.addTank(injectTank);
         return builder.build();
@@ -148,28 +148,6 @@ public class TileEntityChemicalDemolitionMachine extends MSTileEntityProgressMac
 
     protected boolean useStatisticalMechanics() {
         return false;
-    }
-
-
-    @NotNull
-    @Override
-    public IChemicalTankHolder getInitialInfusionTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
-        ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
-        return builder.build();
-    }
-
-    @NotNull
-    @Override
-    public IChemicalTankHolder getInitialPigmentTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
-        ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
-        return builder.build();
-    }
-
-    @NotNull
-    @Override
-    public IChemicalTankHolder getInitialSlurryTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
-        ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
-        return builder.build();
     }
 
     @NotNull

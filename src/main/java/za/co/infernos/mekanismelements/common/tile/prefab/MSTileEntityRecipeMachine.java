@@ -3,9 +3,6 @@ package za.co.infernos.mekanismelements.common.tile.prefab;
 import za.co.infernos.mekanismelements.common.recipe.lookup.IMSRecipeLookupHandler;
 import za.co.infernos.mekanismelements.common.recipe.lookup.monitor.MSRecipeCacheLookupMonitor;
 import mekanism.api.IContentsListener;
-import mekanism.api.chemical.Chemical;
-import mekanism.api.chemical.ChemicalStack;
-import mekanism.api.chemical.IChemicalTank;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.block.Block;
 import mekanism.api.recipes.MekanismRecipe;
@@ -18,7 +15,6 @@ import mekanism.common.capabilities.holder.heat.IHeatCapacitorHolder;
 import mekanism.common.capabilities.holder.slot.IInventorySlotHolder;
 import mekanism.common.inventory.container.MekanismContainer;
 import mekanism.common.tile.base.TileEntityMekanism;
-import mekanism.common.tile.component.TileComponentConfig;
 import mekanism.common.tile.prefab.TileEntityConfigurableMachine;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.state.BlockState;
@@ -104,54 +100,16 @@ public abstract class MSTileEntityRecipeMachine<RECIPE extends MekanismRecipe<?>
     }
 
     @Nullable
-    public final IChemicalTankHolder getInitialGasTanks(IContentsListener listener) {
-        return getInitialGasTanks(listener, listener == this ? recipeCacheLookupMonitor : getRecipeCacheSaveOnlyListener());
+    @Override
+    public final IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener) {
+        return getInitialChemicalTanks(listener, listener == this ? recipeCacheLookupMonitor : getRecipeCacheSaveOnlyListener());
     }
 
     /**
      * @apiNote Do not call directly, only override implementation
      */
     @Nullable
-    protected IChemicalTankHolder getInitialGasTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
-        return null;
-    }
-
-    @Nullable
-    public final IChemicalTankHolder getInitialInfusionTanks(IContentsListener listener) {
-        return getInitialInfusionTanks(listener, listener == this ? recipeCacheLookupMonitor : getRecipeCacheSaveOnlyListener());
-    }
-
-    /**
-     * @apiNote Do not call directly, only override implementation
-     */
-    @Nullable
-    protected IChemicalTankHolder getInitialInfusionTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
-        return null;
-    }
-
-    @Nullable
-    public final IChemicalTankHolder getInitialPigmentTanks(IContentsListener listener) {
-        return getInitialPigmentTanks(listener, listener == this ? recipeCacheLookupMonitor : getRecipeCacheSaveOnlyListener());
-    }
-
-    /**
-     * @apiNote Do not call directly, only override implementation
-     */
-    @Nullable
-    protected IChemicalTankHolder getInitialPigmentTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
-        return null;
-    }
-
-    @Nullable
-    public final IChemicalTankHolder getInitialSlurryTanks(IContentsListener listener) {
-        return getInitialSlurryTanks(listener, listener == this ? recipeCacheLookupMonitor : getRecipeCacheSaveOnlyListener());
-    }
-
-    /**
-     * @apiNote Do not call directly, only override implementation
-     */
-    @Nullable
-    protected IChemicalTankHolder getInitialSlurryTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
+    protected IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
         return null;
     }
 

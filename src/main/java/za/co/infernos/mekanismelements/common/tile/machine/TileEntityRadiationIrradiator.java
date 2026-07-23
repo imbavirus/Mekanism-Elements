@@ -131,7 +131,7 @@ public class TileEntityRadiationIrradiator extends MSTileEntityProgressMachine<R
 
     @NotNull
     @Override
-    protected IChemicalTankHolder getInitialGasTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
+    protected IChemicalTankHolder getInitialChemicalTanks(IContentsListener listener, IContentsListener recipeCacheListener) {
         ChemicalTankHelper builder = ChemicalTankHelper.forSideWithConfig(this);
         builder.addTank(injectTank);
         builder.addTank(chemicalOutputTank);
