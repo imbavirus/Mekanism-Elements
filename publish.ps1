@@ -449,10 +449,10 @@ function Resolve-CurseForgeGameVersionIds([hashtable]$cf, [string]$minecraftVers
     } | Select-Object -First 1
 
     if (-not $clientEnv) {
-      $clientEnv = $all | Where-Object { $_.name -eq "Client" -or $_.slug -eq "client" } | Select-Object -First 1
+      $clientEnv = $all | Where-Object { $_.name -eq "Client" -or $_.slug -eq "client" -or $_.id -eq 9638 } | Select-Object -First 1
     }
     if (-not $serverEnv) {
-      $serverEnv = $all | Where-Object { $_.name -eq "Server" -or $_.slug -eq "server" } | Select-Object -First 1
+      $serverEnv = $all | Where-Object { $_.name -eq "Server" -or $_.slug -eq "server" -or $_.id -eq 9639 } | Select-Object -First 1
     }
 
     if ($clientEnv -and $clientEnv.id) {
