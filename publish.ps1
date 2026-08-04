@@ -439,31 +439,33 @@ function Resolve-CurseForgeGameVersionIds([hashtable]$cf, [string]$minecraftVers
     }
     $resolved += $envIds
   } else {
-    # Auto-resolve server and client environment IDs
-    # Server-side environment type ID is 1, Client is 2 (from CurseForge API docs)
-    # Search for environment versions with these type IDs
-    $serverEnv = $all | Where-Object {
-      $_.gameVersionTypeID -eq 1 -and ($_.name -like "*server*" -or $_.slug -like "*server*" -or $_.id -eq 1)
-    } | Select-Object -First 1
+    # Auto-resolve Client/Server environment version IDs from the environment group
+    # (gameVersionTypeID 75208; IDs are NOT 1/2 — those belong to a different game).
     $clientEnv = $all | Where-Object {
-      $_.gameVersionTypeID -eq 1 -and ($_.name -like "*client*" -or $_.slug -like "*client*" -or $_.id -eq 2)
+      ($_.name -eq "Client" -or $_.slug -eq "client") -and ($_.gameVersionTypeID -eq 75208 -or -not $_.gameVersionTypeID)
     } | Select-Object -First 1
-    
-    # If not found by name, try by ID (common: Server = 1, Client = 2)
-    if (-not $serverEnv) {
-      $serverEnv = $all | Where-Object { $_.id -eq 1 -and $_.gameVersionTypeID -eq 1 } | Select-Object -First 1
-    }
+    $serverEnv = $all | Where-Object {
+      ($_.name -eq "Server" -or $_.slug -eq "server") -and ($_.gameVersionTypeID -eq 75208 -or -not $_.gameVersionTypeID)
+    } | Select-Object -First 1
+
     if (-not $clientEnv) {
-      $clientEnv = $all | Where-Object { $_.id -eq 2 -and $_.gameVersionTypeID -eq 1 } | Select-Object -First 1
+      $clientEnv = $all | Where-Object { $_.name -eq "Client" -or $_.slug -eq "client" } | Select-Object -First 1
     }
-    
-    if ($serverEnv -and $serverEnv.id) { 
+    if (-not $serverEnv) {
+      $serverEnv = $all | Where-Object { $_.name -eq "Server" -or $_.slug -eq "server" } | Select-Object -First 1
+    }
+
+    if ($clientEnv -and $clientEnv.id) {
+      $resolved += [int]$clientEnv.id
+      Write-Host "Auto-resolved Client environment ID: $($clientEnv.id)"
+    }
+    if ($serverEnv -and $serverEnv.id) {
       $resolved += [int]$serverEnv.id
       Write-Host "Auto-resolved Server environment ID: $($serverEnv.id)"
     }
-    if ($clientEnv -and $clientEnv.id) { 
-      $resolved += [int]$clientEnv.id
-      Write-Host "Auto-resolved Client environment ID: $($clientEnv.id)"
+
+    if (-not $clientEnv -or -not $serverEnv) {
+      Write-Warning "Could not auto-resolve Client/Server environment IDs. Set CF_ENVIRONMENT_IDS (e.g. 9638,9639) if upload fails."
     }
   }
 
