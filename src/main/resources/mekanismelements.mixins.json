@@ -7,15 +7,15 @@
   "mixins": [
     "MixinTileEntityChemicalInfuser",
     "MixinTileEntityGasGenerator",
-    "MixinClientTickHandler",
-    "MixinCommonPlayerTickHandler",
     "MixinComponentBackedChemicalTank",
     "MixinItemChemicalArmor",
     "MixinItemJetpack",
     "MixinItemMekaSuitArmor",
     "MixinModuleJetpackUnit"
   ],
-  "client": [],
+  "client": [
+    "MixinClientTickHandler"
+  ],
   "server": [],
   "injectors": {
     "defaultRequire": 1
