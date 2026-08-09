@@ -262,7 +262,14 @@ function Git-CommitTagPush([string]$newVersion) {
   
   if ($remoteExists) {
     # Check if we're behind the remote
-    git fetch origin $currentBranch 2>&1 | Out-Null
+    # git writes progress to stderr; don't let PS ErrorAction Stop kill the release
+    $prevEap = $ErrorActionPreference
+    $ErrorActionPreference = 'Continue'
+    try {
+      git fetch origin $currentBranch 2>&1 | Out-Null
+    } finally {
+      $ErrorActionPreference = $prevEap
+    }
     $localCommit = git rev-parse HEAD
     $remoteCommit = git rev-parse $remoteBranch 2>$null
     if ($remoteCommit -and $localCommit) {
